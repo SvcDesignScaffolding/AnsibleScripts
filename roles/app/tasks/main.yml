@@ -13,4 +13,4 @@
   shell: "kubectl apply -f /tmp/app/{{ item }}"
   when: inventory_hostname in groups[group]
   with_items:
-    - deploy-app.yaml
+   - deploy-app.yaml

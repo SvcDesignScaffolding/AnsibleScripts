@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: debian-c-sysinfo
+  name: app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: debian-c-sysinfo
+      app: demo
   template:
     metadata:
       labels:
-        app: debian-c-sysinfo
+        app: demo
     spec:
       containers:
-      - name: debian-c-sysinfo
-        image: artifact.onwalk.net/base/debian-c-sysinfo:0.1
+      - name: demo
+        image: {{ app_image }}:{{ app_tag }} 
         imagePullPolicy: Always
