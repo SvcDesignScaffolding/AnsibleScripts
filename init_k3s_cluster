@@ -22,9 +22,9 @@
       vars:
         group: master
         ingress: nginx
-        domain: onwalk.net
         namespace: ingress
-        external_dns: disable
+        domain: onwalk.net
         auto_issuance: false
         update_secret: false
+        external_dns: disable
         svc_discovery: disable
